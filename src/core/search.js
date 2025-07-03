@@ -7,7 +7,7 @@ async function search(query) {
     const url = `https://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=${encodeURIComponent(query)}`;
     const { data } = await axios.get(url, {
       headers: {
-        "User-Agent": useragent[Math.floor(Math.random() * userAgents.length)],
+        "User-Agent": useragent,
         Accept:
           "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br",
