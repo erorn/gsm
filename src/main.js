@@ -4,6 +4,7 @@ const { select } = require("@inquirer/prompts");
 const { AsciiTable3 } = require("ascii-table3");
 const fs = require("node:fs");
 const { help, license, useragent } = require("./data.js");
+
 async function main() {
   const args = minimist(process.argv.slice(2), {
     alias: { d: "device", s: "save", h: "help" }
