@@ -18,8 +18,5 @@
     "prettier": "^3.6.2",
     "terminal-image": "^3.1.1"
   },
-  "scripts": {
-    "lint": "eslint src --ext .js",
-    "lint:fix": "eslint src --ext .js --fix"
-  }
+  "bin": "./src/main.js"
 }

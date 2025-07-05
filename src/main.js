@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const minimist = require("minimist");
 const { search, getinfo } = require("./core/search");
 const { select } = require("@inquirer/prompts");
