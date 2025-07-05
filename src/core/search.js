@@ -1,13 +1,14 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-const { useragent } = require("../data");
+const UserAgent = require("user-agents");
+const ua = new UserAgent({ platform: "Win32" });
 
 async function search(query) {
   try {
     const url = `https://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=${encodeURIComponent(query)}`;
     const { data } = await axios.get(url, {
       headers: {
-        "User-Agent": useragent,
+        "User-Agent": ua,
         Accept:
           "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br",
@@ -52,7 +53,7 @@ async function getinfo(link) {
   try {
     const { data } = await axios.get(link, {
       headers: {
-        "User-Agent": useragent,
+        "User-Agent": ua,
         Accept:
           "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br",

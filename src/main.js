@@ -8,7 +8,7 @@ const { help, license, useragent } = require("./data.js");
 
 async function main() {
   const args = minimist(process.argv.slice(2), {
-    alias: { d: "device", s: "save", h: "help" }
+    alias: { d: "device", s: "save", h: "help", e: "epey" }
   });
 
   if (args.help) {
